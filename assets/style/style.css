@@ -1,12 +1,7 @@
 h1 {
-    background-color: rgb(174, 174, 205);
-    background-blend-mode: multiply;
-    background-image: url(../images/clouds.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(to right, rgb(20, 20, 113), rgb(132, 207, 242));
     padding: 2% 0;
-    color: rgb(1, 0, 0);
-    text-shadow: 3px 2px 0 rgb(90, 93, 93);
+    color: white;
     text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
@@ -16,4 +11,20 @@ main {
     padding-left: 1%;
 }
 
+#weather {
+    background-color: rgb(174, 174, 205);
+    background-blend-mode: multiply;
+    background-image: url(../images/clouds.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-weight: bold;
+    color: white;
+}
+
+.col-2 {
+    border: solid rgb(185, 200, 199);
+    background-image: linear-gradient(to top, rgb(20, 20, 113), rgb(132, 207, 242));
+    border-radius: 5%;
+    color: white;
+}
 
