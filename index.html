@@ -19,67 +19,68 @@
     </header>
 
     <main>
-        <div id="hero" class="row container-fluid">
-            <!-- This contains the quick search and search bar -->
-            <div id="left-content" class="col-3">
-                <h2>Search:</h2>
-                <form id="search-form" class="col-sm-3 d-grid gap-2">
-                    <input id="search-input" type="text" placeholder="Search here">
-                    <button id="search-btn" class="btn btn-primary btn">Search</button>
-                    <div id="selectable" class="row align-items-start gap-2" style="margin: 0;">
-                        <button type="button" class="btn btn-secondary">Athens</button>
-                        <button type="button" class="btn btn-secondary">Tokyo</button>
-                        <button type="button" class="btn btn-secondary">Lisbon</button>
-                        <button type="button" class="btn btn-secondary">Paris</button>
-                        <button type="button" class="btn btn-secondary">Reykjavik</button>
-                    </div>
-                </form>
-            </div>
-            <!-- this is where the search results populate -->
-            <div id="results" class="col-9 container-fluid">
-                <!-- this section is the main populate area -->
-                <div id="weather" class="border">
-                    <h2 style="padding-left: 1%;" class="">City</h2>
-                    <p style="padding-left: 1%;">Temp:</p>
-                    <p style="padding-left: 1%;">Wind:</p>
-                    <p style="padding-left: 1%;">Humidity:</p>
+        <div id="hero" class="container-fluid">
+            <div class="row">
+                <!-- This contains the quick search and search bar -->
+                <div id="left-content" class="col-12 col-md-3">
+                    <h2>Search:</h2>
+                    <form id="search-form" class="d-grid gap-2">
+                        <input id="search-input" type="text" placeholder="Search here">
+                        <button id="search-btn" class="btn btn-primary btn">Search</button>
+                        <div id="selectable" class="row align-items-start gap-2" style="margin: 0;">
+                            <button type="button" class="btn btn-secondary">Athens</button>
+                            <button type="button" class="btn btn-secondary">Tokyo</button>
+                            <button type="button" class="btn btn-secondary">Lisbon</button>
+                            <button type="button" class="btn btn-secondary">Paris</button>
+                            <button type="button" class="btn btn-secondary">Reykjavik</button>
+                        </div>
+                    </form>
                 </div>
-                <!-- this is the next 5 day populate area -->
-                <div class="row col align-items-start">
-                    <h3>5-Day forecast:</h3>
-                    <div id="day-1" class="col-2 m-1">
-                        <h3><span>Date:</span></h3>
-                        <p>Temp:</p>
-                        <p>Wind:</p>
-                        <p>Humidity:</p>
+                <!-- this is where the search results populate -->
+                <div id="results" class="col-12 col-md-9">
+                    <!-- this section is the main populate area -->
+                    <div id="weather" class="border">
+                        <h2 style="padding-left: 1%;" class="">City</h2>
+                        <p style="padding-left: 1%;">Temp:</p>
+                        <p style="padding-left: 1%;">Wind:</p>
+                        <p style="padding-left: 1%;">Humidity:</p>
                     </div>
-                    <div id="day-2" class="col-2 m-1">
-                        <h3><span>Date:</span></h3>
-                        <p>Temp:</p>
-                        <p>Wind:</p>
-                        <p>Humidity:</p>
-                    </div>
-                    <div id="day-3" class="col-2 m-1">
-                        <h3><span>Date:</span></h3>
-                        <p>Temp:</p>
-                        <p>Wind:</p>
-                        <p>Humidity:</p>
-                    </div>
-                    <div id="day-4" class="col-2 m-1">
-                        <h3><span>Date:</span></h3>
-                        <p>Temp:</p>
-                        <p>Wind:</p>
-                        <p>Humidity:</p>
-                    </div>
-                    <div id="day-5" class="col-2 m-1">
-                        <h3><span>Date:</span></h3>
-                        <p>Temp:</p>
-                        <p>Wind:</p>
-                        <p>Humidity:</p>
+                    <!-- this is the next 5 day populate area -->
+                    <div class="row col align-items-start">
+                        <h3>5-Day forecast:</h3>
+                        <div id="day-1" class="col-12 col-md-2 m-1">
+                            <h3><span>Date:</span></h3>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div id="day-2" class="col-12 col-md-2 m-1">
+                            <h3><span>Date:</span></h3>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div id="day-3" class="col-12 col-md-2 m-1">
+                            <h3><span>Date:</span></h3>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div id="day-4" class="col-12 col-md-2 m-1">
+                            <h3><span>Date:</span></h3>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
+                        <div id="day-5" class="col-12 col-md-2 m-1">
+                            <h3><span>Date:</span></h3>
+                            <p>Temp:</p>
+                            <p>Wind:</p>
+                            <p>Humidity:</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
 

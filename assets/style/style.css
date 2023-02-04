@@ -21,7 +21,7 @@ main {
     color: white;
 }
 
-.col-2 {
+.col-md-2 {
     border: solid rgb(185, 200, 199);
     background-image: linear-gradient(to top, rgb(20, 20, 113), rgb(132, 207, 242));
     border-radius: 5%;
