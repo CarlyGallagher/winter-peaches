@@ -1,16 +1,15 @@
-var APIkey = 'd3a2ff100ca39275bb1aa547304afe71'
-var queryURL = 'https://api.openweathermap.org/data/2.5/forecast?lat=""&lon=""&appid=""'
-var geoCode = 'http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}'
+var key = 'd3a2ff100ca39275bb1aa547304afe71';
+var queryURL = 'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}';
+var geoCode = 'http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}';
 var search = document.getElementById('search-input');
 var searchButton = document.getElementById('search-btn');
 var cityEl = document.getElementById('city');
-var lat;
-var lon;
 
 searchButton.addEventListener('click', everythingNow);
 
-function everythingNow() {
-    var geoCode = 'http://api.openweathermap.org/geo/1.0/direct?q=' + search.value + '&limit=1&appid=' + APIkey + '';
+function everythingNow(event) {
+    event.preventDefault();
+    var geoCode = 'http://api.openweathermap.org/geo/1.0/direct?q=' + search.value + '&limit=1&appid=' + key + '';
 
     fetch(geoCode)
         .then(function (response) {
@@ -18,16 +17,12 @@ function everythingNow() {
         })
         .then(function (data) {
             console.log(data)
+
+
             var lat = data[0].lat;
             var lon = data[0].lon;
             var queryURL =
-                "https://api.openweathermap.org/data/2.5/forecast?lat=" +
-                lat +
-                "&lon=" +
-                lon +
-                "&appid=" +
-                APIkey +
-                "&units=imperial";
+                `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=imperial`;
 
             fetch(queryURL)
                 .then(function (response) {
@@ -37,8 +32,9 @@ function everythingNow() {
                     console.log(data);
                     cityEl.textContent = data.city.name;
                     for (var i = 0; i < 6; i++) {
+
                         document.getElementById("temp-" + i + "").textContent =
-                            "temp: " + Number(data.list[i].main.temp).toFixed(0) + "°"; 
+                            "temp: " + Number(data.list[i].main.temp).toFixed(0) + "°";
                     }
 
                     for (var i = 0; i < 6; i++) {
@@ -48,7 +44,7 @@ function everythingNow() {
 
                     for (var i = 0; i < 6; i++) {
                         document.getElementById("humidity-" + i + "").textContent =
-                            "Humidity: " +  Number(data.list[i].main.humidiy).toFixed(0) + "%";
+                            "Humidity: " + Number(data.list[i].main.humidity).toFixed(0) + "%";
                     }
                     for (var i = 0; i < 6; i++) {
                         document.getElementById("icon-" + i + "").src =
@@ -70,5 +66,7 @@ var weekday = [
 ];
 
 for (let i = 0; i < 6; i++) {
-    document.getElementById("day-" + i + "").textContent = weekday[i];
+    document.getElementById("date-" + i + "").textContent = weekday[i];
 }
+
+everythingNow();
