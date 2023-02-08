@@ -68,5 +68,3 @@ var weekday = [
 for (let i = 0; i < 6; i++) {
     document.getElementById("date-" + i + "").textContent = weekday[i];
 }
-
-everythingNow();
